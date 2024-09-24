@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="style.css">
 
+
+
     <!-- the below three lines are a fix to get HTML5 semantic elements working in old versions of Internet Explorer-->
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -113,7 +115,7 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <div onclick="showHideBtnClicked()" class="show-hide">Show comments</div>
 
           <div class="comment-wrapper">
 
@@ -173,6 +175,8 @@
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
 
+    <script src="checkImage.js"></script>
+    <script src="fetchImageUrl.js"></script>
     <script src="main.js"></script>
 
   </body>

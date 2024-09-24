@@ -56,9 +56,72 @@ Fix application code and answer the questions:
 
 >  **What bad coding practices did you find? Why is it a bad practice and how did you fix it?**
 
-Present your findings here...
+If known that a variable will not get updated, `const` should be used instead:
 ``` JS
-console.log('Make use of markdown codesnippets to show and explain good/bad practices!')
+var myString;
+```
+to
+``` JS
+const myString;
+```
+\
+When a reference is stored, it should be accessed from the variable it is stored in. That way if the reference needs to be changed, it only needs to be changed in one place.
+``` JS
+const showHideText = showHideBtn.textContent;
+  if(showHideText === 'Show comments') {
+    showHideBtn.textContent = 'Hide comments';
+    ...
+  }
+```
+to
+``` JS
+const showHideText = showHideBtn.textContent;
+  if(showHideText === 'Show comments') {
+    showHideText = 'Hide comments';
+    ...
+  }
+```
+\
+Using `===` instead of `==` can prevent unwanted type conversion.
+``` JS
+if(showHideText == 'Show comments') {
+  ...
+}
+```
+to
+``` JS
+if(showHideText === 'Show comments') {
+  ...
+}
+```
+\
+Avoiding redundant variables improves readability.
+``` JS
+const imageUrl = Object.values(pages)[0].imageinfo[0].url;
+return imageUrl;
+```
+to
+``` JS
+return Object.values(pages)[0].imageinfo[0].url;
+```
+\
+Using named functions instead of anonymous functions improves readability and maintainability.
+``` html
+<div class="show-hide">Show comments</div>
+```
+``` JS
+showHideBtn.onclick = () => {
+  ...
+};
+```
+to
+``` html
+<div onclick="showHideBtnClicked()" class="show-hide">Show comments</div>
+```
+``` JS
+showHideBtnClicked = () => {
+  ...
+};
 ```
 
 
