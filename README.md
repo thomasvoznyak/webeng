@@ -43,7 +43,7 @@ Submit your coding repository link in Moodle. Send me an invitation to your repo
 The provided base project template contains some bugs and bad JS coding practices for you to fix in your first playground. Take a look into the component files and get a grasp of the inner workings of the provided project.
 > **ATTENTION: After finishing the JS Playground please create a commit or branch and link it below. Otherwise it is not possible to grade your 1. submission, since we will switch to TypeScript afterwards!**
 > 
-> **This is my JS Playground commit/branch:** <LINK_TO_YOUR_COMMIT>
+> **This is my JS Playground branch:** first_playground
 
 **Tasks:**
 Fix application code and answer the questions:
@@ -56,9 +56,55 @@ Fix application code and answer the questions:
 
 >  **What bad coding practices did you find? Why is it a bad practice and how did you fix it?**
 
-Present your findings here...
+If known that a variable will not get updated, `const` should be used instead:
 ``` JS
-console.log('Make use of markdown codesnippets to show and explain good/bad practices!')
+var myString;
+```
+to
+``` JS
+const myString;
+```
+\
+Using `===` instead of `==` can prevent unwanted type conversion.
+``` JS
+if(showHideText == 'Show comments') {
+  ...
+}
+```
+to
+``` JS
+if(showHideText === 'Show comments') {
+  ...
+}
+```
+\
+Avoiding redundant variables improves readability.
+``` JS
+const imageUrl = Object.values(pages)[0].imageinfo[0].url;
+return imageUrl;
+```
+to
+``` JS
+return Object.values(pages)[0].imageinfo[0].url;
+```
+\
+Using named functions instead of anonymous functions improves readability and maintainability.
+``` html
+<div class="show-hide">Show comments</div>
+```
+``` JS
+showHideBtn.onclick = () => {
+  ...
+};
+```
+to
+``` html
+<div onclick="showHideBtnClicked()" class="show-hide">Show comments</div>
+```
+``` JS
+showHideBtnClicked = () => {
+  ...
+};
 ```
 
 
