@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "test": "vitest",
+    "coverage": "vitest coverage",
     "preview": "vite preview",
     "lint": "eslint ./src/**/*.{js,ts}",
     "lint:fix": "eslint ./src/**/*.{js,ts} --fix",
@@ -22,6 +24,7 @@
     ]
   },
   "devDependencies": {
+    "@vitest/coverage-istanbul": "^2.1.4",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard-with-typescript": "^43.0.1",
@@ -30,6 +33,7 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "typescript": "^5.5.3",
-    "vite": "^5.4.8"
+    "vite": "^5.4.8",
+    "vitest": "^2.1.4"
   }
 }
