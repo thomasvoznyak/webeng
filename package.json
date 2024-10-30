@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "test": "vitest",
-    "coverage": "vitest coverage",
+    "coverage": "vitest --run coverage",
     "preview": "vite preview",
     "lint": "eslint ./src/**/*.{js,ts}",
     "lint:fix": "eslint ./src/**/*.{js,ts} --fix",
