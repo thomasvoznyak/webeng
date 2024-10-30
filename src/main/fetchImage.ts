@@ -18,7 +18,8 @@ export const fetchImageUrl = async (fileName: string): Promise<string> => {
       string,
       { imageinfo?: Array<{ url: string }> }
     >;
-    const imageInfo: Array<{ url: string }> | undefined = Object.values(pages)[0].imageinfo;
+    const imageInfo: Array<{ url: string }> | undefined =
+      Object.values(pages)[0].imageinfo;
 
     if (imageInfo === undefined) {
       return 'media/fallback.png';
