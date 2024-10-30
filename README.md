@@ -43,7 +43,7 @@ Submit your coding repository link in Moodle. Send me an invitation to your repo
 The provided base project template contains some bugs and bad JS coding practices for you to fix in your first playground. Take a look into the component files and get a grasp of the inner workings of the provided project.
 > **ATTENTION: After finishing the JS Playground please create a commit or branch and link it below. Otherwise it is not possible to grade your 1. submission, since we will switch to TypeScript afterwards!**
 > 
-> **This is my JS Playground commit/branch:** <LINK_TO_YOUR_COMMIT>
+> **This is my JS Playground branch:** first_playground
 
 **Tasks:**
 Fix application code and answer the questions:
@@ -56,9 +56,55 @@ Fix application code and answer the questions:
 
 >  **What bad coding practices did you find? Why is it a bad practice and how did you fix it?**
 
-Present your findings here...
+If known that a variable will not get updated, `const` should be used instead:
 ``` JS
-console.log('Make use of markdown codesnippets to show and explain good/bad practices!')
+var myString;
+```
+to
+``` JS
+const myString;
+```
+\
+Using `===` instead of `==` can prevent unwanted type conversion.
+``` JS
+if(showHideText == 'Show comments') {
+  ...
+}
+```
+to
+``` JS
+if(showHideText === 'Show comments') {
+  ...
+}
+```
+\
+Avoiding redundant variables improves readability.
+``` JS
+const imageUrl = Object.values(pages)[0].imageinfo[0].url;
+return imageUrl;
+```
+to
+``` JS
+return Object.values(pages)[0].imageinfo[0].url;
+```
+\
+Using named functions instead of anonymous functions improves readability and maintainability.
+``` html
+<div class="show-hide">Show comments</div>
+```
+``` JS
+showHideBtn.onclick = () => {
+  ...
+};
+```
+to
+``` html
+<div onclick="showHideBtnClicked()" class="show-hide">Show comments</div>
+```
+``` JS
+showHideBtnClicked = () => {
+  ...
+};
 ```
 
 
@@ -112,7 +158,16 @@ Apply the following ruleset for Prettier:
 
 >  **What improvements in your codebase were introduced by using TS instead of JS? Name at least 3 and explain why.**
 
-Present your findings here...
+- Static Typing:
+  TypeScript allows developers to define types for variables, function parameters, and return values. This leads to early detection of type-related errors during development, preventing many runtime bugs.
+- Better IDE Support (in my case "IntelliJ Ultimate"):
+  With TypeScript, IDE features like autocompletion, code navigation, and refactoring are significantly improved. This is because the IDEs can infer more information about the types, leading to better suggestions and error-checking.
+- Type Inference:
+  TypeScript has type inference, which means that even without explicitly declaring types, TypeScript can often infer the types based on the code structure, striking a balance between flexibility and type safety.
+- Compile-Time Error Checking:
+  TypeScript detects errors during compilation, meaning that you can catch mistakes before the code even runs. This helps reduce runtime errors.
+- Backward Compatibility:
+  TypeScript can be transpiled into plain JavaScript, meaning that it can run anywhere JavaScript runs (including older browsers and environments) while still offering modern features. This makes TypeScript an easy drop-in improvement for most JavaScript projects.
 
 ## 3.	CI/CD Pipeline Playground (5 Pts.)
 Implementation of a CI/CD pipeline to automate the development and deployment process – write automated tests.
