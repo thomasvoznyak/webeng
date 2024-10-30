@@ -18,7 +18,7 @@ export const fetchImageUrl = async (fileName: string): Promise<string> => {
       string,
       { imageinfo?: Array<{ url: string }> }
     >;
-    const imageInfo: Array<{ url: string }> = Object.values(pages)[0].imageinfo!;
+    const imageInfo: Array<{ url: string }> = Object.values(pages)[0].imageinfo;
 
     if (imageInfo.length > 0) {
       return imageInfo[0].url;
