@@ -4,3 +4,4 @@ dist/
 .prettierignore
 .eslintrc.cjs
 .eslintignore
+vite.config.ts
