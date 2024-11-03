@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
 
@@ -24,7 +24,7 @@
       <font size="7">Welcome to our wildlife website</font>
     </div>
 
-    <div class="nav">
+    <div class="nav" aria-label="Navigation">
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Our team</a></li>
@@ -33,8 +33,13 @@
       </ul>
 
       <form class="search">
-        <input type="search" name="q" placeholder="Search query" />
-        <input type="submit" value="Go!" />
+        <input
+          type="search"
+          name="q"
+          placeholder="Search query"
+          aria-label="Search bar"
+        />
+        <input type="submit" value="Go!" aria-label="Search button" />
       </form>
     </div>
 
@@ -130,7 +135,7 @@
         The following audio clip contains a fact file providing more details
         about bear mating rituals, along with samples and quotes from experts.
         <br /><br />
-        <audio controls>
+        <audio controls aria-label="Audio file of mating bears">
           <source src="media/bear.mp3" type="audio/mp3" />
           <source src="media/bear.ogg" type="audio/ogg" />
           <p>It looks like your browser doesn't support HTML5 audio players.</p>
@@ -147,14 +152,14 @@
           them, and thinks they sound cool.
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <button class="show-hide">Show comments</button>
 
           <div class="comment-wrapper">
-            <font size="6">Add comment</font>
+            <font size="6" style="color: black">Add comment</font>
 
-            <form class="comment-form">
+            <form class="comment-form" style="color: black">
               <div class="flex-pair">
-                Your name:
+                <label for="name">Your name:</label>
                 <input
                   type="text"
                   name="name"
@@ -163,7 +168,7 @@
                 />
               </div>
               <div class="flex-pair">
-                Your comment:
+                <label for="comment">Your comment:</label>
                 <input
                   type="text"
                   name="comment"
@@ -176,7 +181,7 @@
               </div>
             </form>
 
-            <font size="6">Comments</font>
+            <font size="6" style="color: black">Comments</font>
 
             <ul class="comment-container">
               <li>
@@ -194,7 +199,7 @@
           </div>
         </section>
 
-        <section class="more_bears">
+        <section class="more_bears" style="color: white">
           <font size="5">More Bears</font>
         </section>
       </article>
@@ -203,17 +208,19 @@
         <font size="6">Related</font>
 
         <ul>
-          <li><a href="#">The trouble with Bees</a></li>
-          <li><a href="#">The trouble with Otters</a></li>
-          <li><a href="#">The trouble with Penguins</a></li>
-          <li><a href="#">The trouble with Octopi</a></li>
-          <li><a href="#">The trouble with Lemurs</a></li>
+          <li><a href="#" class="menu-item">The trouble with Bees</a></li>
+          <li><a href="#" class="menu-item">The trouble with Otters</a></li>
+          <li><a href="#" class="menu-item">The trouble with Penguins</a></li>
+          <li><a href="#" class="menu-item">The trouble with Octopi</a></li>
+          <li><a href="#" class="menu-item">The trouble with Lemurs</a></li>
         </ul>
       </div>
     </main>
 
     <footer>
-      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+      <p style="color: white">
+        ©Copyright 2050 by nobody. All rights reversed.
+      </p>
     </footer>
   </body>
 </html>
