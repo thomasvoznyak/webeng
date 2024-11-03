@@ -20,7 +20,7 @@ body {
 
 font[size="7"], font[size="6"], font[size="5"] {
   font-family: 'Sonsie One', cursive;
-  color: #2a2a2a;
+  color: #ffffff;
 }
 
 p, input, li, table, label {
@@ -31,7 +31,7 @@ p, input, li, table, label {
 font[size="7"] {
   font-size: 4rem;
   text-align: center;
-  color: white;
+  color: #000000;
   text-shadow: 2px 2px 10px black;
 }
 
@@ -53,10 +53,12 @@ p, li, table {
 
 div[class="nav"], article, footer, .secondary {
   background-color: green;
+  color: white;
 }
 
 article, footer, .secondary {
   padding: 10px 30px;
+  color: white;
 }
 
 article {
@@ -89,7 +91,7 @@ div[class="nav"] a {
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: #ffffff;
 }
 
 div[class="nav"] .search {
@@ -129,6 +131,7 @@ article {
 
 .secondary {
   flex: 2;
+  color: white;
 }
 
 footer {
@@ -247,4 +250,9 @@ audio {
 
 .comment-container li p:nth-child(2) {
   flex: 5;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: white;
 }
