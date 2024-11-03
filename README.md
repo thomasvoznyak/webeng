@@ -194,11 +194,15 @@ Test the current color contrast (text/background), report the results of the tes
 
 *Present your reports here.*
 
+*Wave* reported 41 contrast errors. Almost everywhere in the application has a dark text color been used for text on a dark background and bright text color for text on the bright background.
+
 **(0.5) Semantic HTML**
 
 Report on what happens when you try to navigate the page using a screen reader. Fix those navigation issues.
 
 *Present your reports here.*
+
+When navigating the website with a screen reader many elements have a wrong/misleading audio tag.
 
 **(0.5) Audio** 
 
@@ -206,17 +210,24 @@ The ``<audio>`` player isn't accessible to hearing impaired (deaf) people — ca
 
 *Present your findings and fixes here.*
 
+Adding a aria-label to it explains the elements. For deaf people it is described in the sentence above what the audio file contains?
+
 **(1) Forms** 
   * The ``<input>`` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. Fix this issue by adding a label that is only accessible to screen readers.
   * The two ``<input>`` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
 
 *Present your findings and fixes here.*
 
+Added aria-label to the search bar and button.
+Surround *Your name:* and *Your comment:* with a label and give it a label for the screen reader.
+
 **(0.5) Comment section**
 
 The show/hide comment control button is not currently keyboard-accessible. Can you make it keyboard accessible, both in terms of focusing it using the tab key, and activating it using the return key?
 
 *Present your findings and fixes here.*
+
+By changing the div to a button it gets accessible.
 
 **(1) The table**
 
